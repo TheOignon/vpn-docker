@@ -30,7 +30,7 @@ docker run -v openvpn_data:/etc/openvpn --rm openvpn_gssi gen_pki
 :warning: Si c'est la première utilisation du serveur sur ce volume Docker, la procédure d'initialisation sera faite par défaut :warning:
 
 ```Bash
-docker run -v openvpn_data:/etc/openvpn --cap-add=NET_ADMIN --device=/dev/net/tun -p 1194:1194 -it --rm -d openvpn_gssi
+docker run -v openvpn_data:/etc/openvpn --cap-add=NET_ADMIN --device=/dev/net/tun -p 1194:1194/udp -it --rm -d openvpn_gssi
 ```
 
 ## Ajouter un utilisateur
