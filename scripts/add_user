@@ -1,0 +1,4 @@
+#! /bin/sh
+
+chmod +x easyrsa && \
+	./easyrsa build-client-full $1 nopass
