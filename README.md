@@ -15,7 +15,7 @@ Voici le repository du projet VPN du cours GSSI. Ce projet n'est pas à utiliser
 ## Construire l'image
 
 ```Bash
-docker build --tag=openvpn_gssi
+docker build --tag=openvpn_gssi .
 ```
 
 ## Initialisation
@@ -38,7 +38,7 @@ docker run -v openvpn_data:/etc/openvpn --cap-add=NET_ADMIN --device=/dev/net/tu
 :warning: Pour l'instant ne gère pas le cas où l'utilisateur est déjà existant. Par ailleurs, le script ne génère pas de .ovpn valide ou quoique ce soit (pour le moment) :warning:
 
 ```Bash
-docker run -v openvpn_data:/etc/openvpn --rm add_user $USER_NAME
+docker run -v openvpn_data:/etc/openvpn --rm openvpn_gssi add_user $USER_NAME
 ```
 
 ## Supprimer un utilisateur
