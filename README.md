@@ -1,5 +1,9 @@
 # Devoir GSSI 
 
+## Introduction
+
+Voici le repository du projet VPN du cours GSSI. Ce projet n'est pas à utiliser en production : aucun credentials n'est généré à aucun endroit et la quasi-totalité des variables est laissée par défaut.
+
 ## Sommaire
 
 - [Construitre l'image](#construire-limage)
