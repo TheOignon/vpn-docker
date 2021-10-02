@@ -1,0 +1,5 @@
+#! /bin/sh
+
+[ ! -d /etc/openvpn/pki ] && gen_pki
+
+openvpn --config /etc/openvpn/server/server.conf
