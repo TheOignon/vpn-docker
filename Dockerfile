@@ -18,12 +18,6 @@ ENV EASYRSA_BATCH="yes" \
 
 VOLUME ["/etc/openvpn"]
 
-# RUN chmod +x easyrsa && \
-# 	./easyrsa init-pki && \
-# 	./easyrsa build-ca nopass && \
-# 	./easyrsa build-server-full server nopass && \
-# 	./easyrsa gen-dh
-
 EXPOSE 1194/udp
 
 CMD ["run_openvpn"]
