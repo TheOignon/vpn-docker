@@ -1,13 +1,14 @@
-#! /bin/sh
+#! /bin/bash
 
 OPENVPN_CLIENT_PATH=/etc/openvpn/client
 
-chmod +x easyrsa && ./easyrsa build-client-full $1 nopass &> /dev/null
+chmod +x easyrsa
+./easyrsa build-client-full $1 nopass &> /dev/null
 
 cp $OPENVPN_CLIENT_PATH/client.conf $OPENVPN_CLIENT_PATH/$1.conf
 
-echo "<ca>\n$(cat $EASYRSA_PKI/ca.crt)\n</ca>" >> $OPENVPN_CLIENT_PATH/$1.conf
-echo "<cert>\n$(sed '/^-----BEGIN CERTIFICATE-----/,$!d' $EASYRSA_PKI/issued/$1.crt)\n</cert>" >> $OPENVPN_CLIENT_PATH/$1.conf
-echo "<key>\n$(cat $EASYRSA_PKI/private/$1.key)\n</key>" >> $OPENVPN_CLIENT_PATH/$1.conf
+echo -e "<ca>\n$(cat $EASYRSA_PKI/ca.crt)\n</ca>" >> $OPENVPN_CLIENT_PATH/$1.conf
+echo -e "<cert>\n$(sed '/^-----BEGIN CERTIFICATE-----/,$!d' $EASYRSA_PKI/issued/$1.crt)\n</cert>" >> $OPENVPN_CLIENT_PATH/$1.conf
+echo -e "<key>\n$(cat $EASYRSA_PKI/private/$1.key)\n</key>" >> $OPENVPN_CLIENT_PATH/$1.conf
 
 cat $OPENVPN_CLIENT_PATH/$1.conf
