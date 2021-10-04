@@ -5,6 +5,7 @@ RUN apt update && apt install -y \
 	git
 
 COPY server.conf /etc/openvpn/server/
+COPY client.conf /etc/openvpn/client/
 
 RUN cd /root && git clone https://github.com/OpenVPN/easy-rsa
 
