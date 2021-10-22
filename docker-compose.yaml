@@ -1,6 +1,7 @@
 version: "3"
 services:
   vpn:
+    name: openvpn_gssi
     build: .
     cap_add: 
       - NET_ADMIN
