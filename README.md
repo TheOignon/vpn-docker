@@ -6,7 +6,7 @@ Voici le repository du projet VPN du cours GSSI. Ce projet n'est pas à utiliser
 
 ## Sommaire
 
-- [Construitre l'image](#construire-limage)
+- [Construire l'image](#construire-limage)
 - [Initialisation](#initialisation)
 - [Démarrer le serveur](#d%C3%A9marrer-le-serveur)
 - [Ajouter un utilisateur](#ajouter-un-utilisateur)
